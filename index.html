@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 
+
+      --- 01 TYPOGRAPHY SYSTEM
+      - Font sizes (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+      --- 07 WHITESPACE
+
+      - Spacing system (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+      */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62, 5%;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: #fff;
+        background-color: #333;
+      }
+
+      .m_text_image__block {
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        /* column-gap: 4rem; */
+
+        position: relative;
+        margin-bottom: 3.2rem;
+      }
+
+      .m_text_image__image img {
+        display: block;
+        width: 100%;
+
+        filter: opacity(0.4);
+      }
+
+      .m_text_image--right .m_text_image__image {
+        grid-column: 14/-1;
+      }
+
+      .m_text_image--right .m_text_image__content {
+        grid-column: 8 / span 6;
+        /* Use if we place the content in second place in the html file */
+        /* grid-row: 1/2; */
+
+        /* justify-self: end; */
+        align-self: center;
+      }
+
+      .m_text_image--left .m_text_image__image {
+        grid-column: 1/12;
+      }
+
+      .m_text_image--left .m_text_image__content {
+        grid-column: 12 / span 6;
+        /* Use if we place the content in second place in the html file */
+        /* grid-row: 1/2; */
+        align-self: center;
+      }
+
+      .m_headline__title {
+        font-size: 3rem;
+        /* text-align: end; */
+        /* margin-right: -4.8rem; */
+        /* margin-bottom: 2.4rem; */
+
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .m_p {
+        font-size: 1.6rem;
+        line-height: 1;
+      }
+
+      .m_text_image--right .m_p {
+        text-align: end;
+        padding-right: 1rem;
+      }
+
+      .m_text_image--left .m_p {
+        text-align: start;
+        padding-left: 1rem;
+      }
+
+      /* 1341px/16px = 83 */
+      /* This media querie will fire at 1328 px (83*16) */
+
+      @media (max-width: 83em) {
+        .m_headline__title {
+          font-size: 2.4rem;
+        }
+        .m_p {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+
+    <title>Bug Spade - Grid positioning</title>
+  </head>
+  <body>
+    <section>
+      <article class="m_text_image__block m_text_image--left">
+        <div class="m_text_image__image">
+          <img
+            class="img"
+            src="patrick-fore-JBghIzjbuLs-unsplash.jpg"
+            alt="Stones balance on a beach"
+          />
+        </div>
+        <div class="m_text_image__content">
+          <h2 class="m_headline__title">Some mutual benefits</h2>
+          <p class="m_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum a
+            natus quae deleniti quibusdam expedita corrupti facilis ipsum modi
+          </p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <!-- <article class="m_text_image__block m_text_image--right">
+        <div class="m_text_image__image">
+          <img
+          class="img"
+          src="patrick-fore-JBghIzjbuLs-unsplash.jpg"
+          alt="Stones balance on a beach"
+          />
+        </div>
+        <div class="m_text_image__content">
+          <h2 class="m_headline__title">Some mutual benefits</h2>
+          <p class="m_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum a
+            natus quae deleniti quibusdam expedita corrupti facilis ipsum modi
+          </p>
+        </div>
+      </article> -->
+    </section>
+    <section>
+      <article class="m_text_image__block m_text_image--right">
+        <div class="m_text_image__content">
+          <h2 class="m_headline__title">Some mutual benefits</h2>
+          <p class="m_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum a
+            natus quae deleniti quibusdam expedita corrupti facilis ipsum modi
+          </p>
+        </div>
+        <div class="m_text_image__image">
+          <img
+            class="img"
+            src="patrick-fore-JBghIzjbuLs-unsplash.jpg"
+            alt="Stones balance on a beach"
+          />
+        </div>
+      </article>
+    </section>
+    <section>
+      <article class="m_text_image__block m_text_image--left">
+        <div class="m_text_image__image">
+          <img
+            class="img"
+            src="patrick-fore-JBghIzjbuLs-unsplash.jpg"
+            alt="Stones balance on a beach"
+          />
+        </div>
+        <div class="m_text_image__content">
+          <h2 class="m_headline__title">Some mutual benefits</h2>
+          <p class="m_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum a
+            natus quae deleniti quibusdam expedita corrupti facilis ipsum modi
+          </p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
